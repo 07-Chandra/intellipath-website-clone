@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_utils_service_cmps",
+  "info": {
+    "displayName": "serviceCmp"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    }
+  }
+}

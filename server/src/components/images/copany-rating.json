@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_temp_copany_ratings",
+  "info": {
+    "displayName": "singleImage",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  }
+}

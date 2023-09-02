@@ -1,0 +1,252 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding: 30px 20px;
+    background-color: #6659b8;
+
+    .transition {
+        width: 95%;
+
+        .header {
+            h2 {
+                color: white;
+                font-size: 24px;
+                margin-block: 30px;
+                font-weight: normal;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+        .info {
+            padding: 20px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            border-radius: 5px;
+
+            .header {
+                display: flex;
+                column-gap: 15px;
+                margin-top: -30px;
+
+                .heading {
+                    font-weight: 550;
+                }
+                .image-wrapper {
+                    width: 80px;
+                }
+
+                .intro {
+                    display: flex;
+                    flex-direction: column;
+                    // row-gap: 1px;
+                    // align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .tech {
+                display: flex;
+                column-gap: 10px;
+
+                .cover {
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #6659b8;
+                    .icon {
+                        color: white;
+                    }
+                }
+                .para {
+                    color: #6659b8;
+                }
+            }
+            .company {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 10px;
+
+                .position {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .image-wrapper {
+                        width: 200px;
+                    }
+                }
+                .icon {
+                    transform: rotate(90deg);
+                    margin: 10px auto;
+                    // background-image: url(https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175);
+                    width: 30px;
+                    height: 32px;
+                    margin: 0 auto;
+                    background-position: -555px -122px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .graph {
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 15px;
+        .status {
+            width: 100%;
+            display: flex;
+            // justify-content: center;
+            align-items: center;
+            column-gap: 20px;
+            padding: 20px 30px;
+            border-radius: 5px;
+            background-color: white;
+            border-top: 4px solid rgb(42, 142, 255);
+
+            p {
+                border-left: 1px solid rgb(165, 160, 160);
+                font-size: 16px;
+                color: rgb(151, 143, 143);
+                padding: 10px 15px;
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .image-wrapper {
+                width: 35px;
+            }
+            .icon {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .link {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 30px;
+        color: #fff;
+        padding: 12px 18px 12px 40px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 4px;
+        position: relative;
+        display: inline-block;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        width: 70%;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .container {
+        display: grid;
+        // gap: 12px;
+        grid-template-columns: 60% 40%;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px;
+        .transition {
+            max-width: 600px;
+            justify-self: center;
+            width: 90%;
+
+            .header {
+                h2 {
+                    font-size: 30px;
+                }
+            }
+            .info {
+                .header {
+                    display: flex;
+                    column-gap: 15px;
+                    margin-top: -30px;
+
+                    .heading {
+                        font-weight: 550;
+                    }
+                    .image-wrapper {
+                        width: 80px;
+                    }
+
+                    .intro {
+                        display: flex;
+                        flex-direction: column;
+                        // row-gap: 1px;
+                        // align-items: center;
+                        justify-content: center;
+                    }
+                }
+
+                .tech {
+                    display: flex;
+                    column-gap: 10px;
+
+                    .para {
+                        color: #6659b8;
+                    }
+                }
+                .company {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    row-gap: 5px;
+
+                    .position {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        .image-wrapper {
+                            width: 170px;
+                        }
+                    }
+                    .icon {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+
+        .graph {
+            max-width: 300px;
+            width: 85%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -80px;
+
+            gap: 20px;
+            .status {
+                padding: 10px;
+                margin-right: -80px;
+            }
+            .a0,
+            .a2 {
+                margin-left: -80px;
+            }
+        }
+        .link {
+            margin-left: 15%;
+            width: 40%;
+        }
+    }
+}

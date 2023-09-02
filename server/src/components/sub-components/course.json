@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_sub_components_courses",
+  "info": {
+    "displayName": "Course",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "applyHeading": {
+      "type": "string"
+    },
+    "applyRules": {
+      "type": "json"
+    },
+    "roleHeading": {
+      "type": "string"
+    },
+    "allRoles": {
+      "type": "json"
+    },
+    "skills": {
+      "type": "json"
+    },
+    "skillType": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

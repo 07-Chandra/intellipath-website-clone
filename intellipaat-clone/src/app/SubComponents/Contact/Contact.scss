@@ -1,0 +1,106 @@
+.contact {
+    // height: 450px;
+    max-width: 380px;
+    .contact-form {
+        background-image: url("https://intellipaat.com/wp-content/themes/intellipaat/images/pg-form-bg.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        // margin-top: 50px;
+        background-color: #2c0c4b;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        // margin-top: -120px;
+        // align-items: center;
+        width: 100%;
+        // padding-top: 1000px;
+        padding: 25px 15px;
+        align-items: center;
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.276);
+
+        .cover1 {
+            // background-color: #2c0c4b;
+            display: flex;
+
+
+            flex-direction: column;
+            margin-top: 60px;
+            z-index: 999;
+            align-items: center;
+            row-gap: 15px;
+            width: 100%;
+            // padding: 25px 10px;
+            h3 {
+                color: white;
+                z-index: 999;
+                font-size: 20px;
+                font-weight: 450;
+
+                span {
+                    color: #e9923b;
+                }
+            }
+            .form {
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                row-gap: 12px;
+                input {
+                    border-radius: 5px;
+                    width: 100%;
+                    border: none;
+                    padding: 11px 15px;
+                    background-color: #dae4ed;
+                    border: 1px solid rgb(122, 122, 122);
+
+                    &::placeholder {
+                        font-size: 15px;
+                        font-weight: 480;
+                    }
+                }
+                .number {
+                    display: flex;
+
+                    .btn {
+                        display: flex;
+                        align-items: center;
+                        column-gap: 15px;
+                        width: 50%;
+                        border: none;
+                        padding: 11px 15px;
+                        // background-color: rgba(255, 255, 255, 0.84);
+                        background-color: #dae4ed;
+                        border: 1px solid rgb(122, 122, 122);
+                        color: #757575;
+                        font-weight: normal;
+                        border-radius: 5px;
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .btn {
+                width: 90%;
+                padding: 13px;
+            }
+            .box {
+                padding: 5px 15px;
+                display: flex;
+                column-gap: 10px;
+
+                p {
+                    color: white;
+                    font-size: 13px;
+                    line-height: 20px;
+
+                    span {
+                        font-weight: normal;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}

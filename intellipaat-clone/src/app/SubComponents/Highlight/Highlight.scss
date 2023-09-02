@@ -1,0 +1,53 @@
+.highlightor {
+    width: 350px;
+
+    height: 400px;
+    background-color: white;
+    box-shadow: 0px 4px 16px rgb(0 0 0/14%);
+    .head {
+        padding: 15px 15px;
+        background-color: var(--blue-color);
+
+        h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: white;
+        }
+    }
+
+    .role {
+        display: flex;
+        padding: 12px 15px;
+        column-gap: 15px;
+        // justify-content: center;
+        align-items: center;
+
+        .icon-div {
+            padding: 12px;
+            border-right: 1px solid var(--blue-color);
+            .icon {
+                font-size: 30px;
+                color: var(--blue-color);
+            }
+            .purpl {
+                color: var(--purple-color);
+            }
+            .orang {
+                color: var(--orange-color);
+            }
+            .gree {
+                color: green;
+            }
+        }
+        .purple {
+            color: green;
+            border-right: 1px solid var(--purple-color);
+        }
+        .orange {
+         border-right: 1px solid var(--orange-color);
+        }
+        .green {
+            border-right: 1px solid green;
+        }
+    }
+}

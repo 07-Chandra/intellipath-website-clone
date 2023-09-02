@@ -1,0 +1,115 @@
+.mentors {
+    display: flex;
+    justify-content: center;
+
+    .mentors-container {
+        padding: 30px 10px;
+        width: 85%;
+        row-gap: 30px;
+        // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.242);
+        .header {
+            margin-bottom: 70px;
+        }
+
+        .all-info {
+            .info {
+                display: flex;
+                background-color: white;
+                flex-direction: column;
+                row-gap: 20px;
+                box-shadow: 0 2px 16px rgb(0 0 0/8%);
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    row-gap: 10px;
+
+                    padding: 120px 30px;
+                    border-top: 3px solid var(--blue-color);
+
+                    .image-wrapper {
+                        width: 80px;
+                        margin-top: -160px;
+                        img {
+                            border-radius: 50%;
+                            border: 2px solid var(--blue-color);
+                        }
+                    }
+                }
+            }
+
+            .second {
+                display: none;
+            }
+            .third {
+                display: none;
+            }
+        }
+        .intrest-program {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .mentors {
+        display: flex;
+        justify-content: center;
+        .mentors-container {
+            width: 90%;
+            row-gap: 30px;
+            // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.242);
+            .header {
+                margin-bottom: 70px;
+            }
+
+            .all-info {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+
+                .second {
+                    display: block;
+                }
+            }
+            .intrest-program {
+                width: 100%;
+                margin-block: 40px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mentors {
+        display: flex;
+        justify-content: center;
+        .mentors-container {
+            width: 80%;
+            // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.242);
+            .header {
+                margin-bottom: 70px;
+            }
+
+            .all-info {
+                display: block;
+                width: 100%;
+                .info {
+                    display: none;
+                }
+                .second {
+                    display: none;
+                }
+                .third {
+                     width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
+                }
+            }
+        }
+    }
+}

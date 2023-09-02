@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_utils_review_centers",
+  "info": {
+    "displayName": "reviewCenter"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "about": {
+      "type": "text"
+    },
+    "profileImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

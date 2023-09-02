@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_sub_components_projects",
+  "info": {
+    "displayName": "project",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "advancement": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.icon-about"
+    },
+    "levels": {
+      "type": "json"
+    },
+    "aboutHosting": {
+      "type": "json"
+    },
+    "percent": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

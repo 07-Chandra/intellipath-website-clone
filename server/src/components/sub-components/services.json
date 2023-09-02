@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_sub_components_services",
+  "info": {
+    "displayName": "services",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "stage": {
+      "type": "json"
+    },
+    "alumni": {
+      "type": "string"
+    },
+    "alumniImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "peer": {
+      "type": "string"
+    },
+    "aboutPeer": {
+      "type": "text"
+    },
+    "allInfo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.service-cmp"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.icon-about"
+    },
+    "peerImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "images.copany-rating"
+    }
+  }
+}

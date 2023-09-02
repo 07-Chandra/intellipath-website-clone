@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_utils_wrap_infos",
+  "info": {
+    "displayName": "wrapInfo"
+  },
+  "options": {},
+  "attributes": {
+    "infoData": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.service-cmp"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "collectionName": "components_sub_components_transitions",
+  "info": {
+    "displayName": "Transition",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about": {
+      "type": "string"
+    },
+    "arrowImg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.icon-about"
+    },
+    "status": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utils.icon-about"
+    },
+    "title": {
+      "type": "string"
+    },
+    "company": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utils.icon-about"
+    },
+    "nextCompany": {
+      "type": "component",
+      "repeatable": false,
+      "component": "utils.icon-about"
+    },
+    "btnName": {
+      "type": "string"
+    }
+  }
+}

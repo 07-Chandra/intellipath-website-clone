@@ -1,0 +1,29 @@
+.points {
+    display: flex;
+    // justify-content: center;
+    // margin-block: 10px;
+    border-bottom: 2px solid rgb(169, 169, 169);
+
+    align-items: center;
+    column-gap: 20px;
+    padding: 14px 18px;
+    background-color: white;
+    box-shadow: 0 2px 16px rgb(0 0 0/8%);
+    .icon-part {
+        .icon {
+            font-size: 5px;
+            color: var(--blue-color);
+        }
+
+        .arrow {
+            font-size: 20px;
+            font-weight: 900;
+            //    padding-left: 10px;
+
+            color: rgb(106, 106, 106);
+        }
+    }
+    .para {
+        flex-grow: 10;
+    }
+}

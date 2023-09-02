@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_sub_components_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "courseName": {
+      "type": "string"
+    },
+    "courseBy": {
+      "type": "string"
+    },
+    "aboutCourse": {
+      "type": "string"
+    },
+    "seat": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    },
+    "rank": {
+      "type": "string"
+    },
+    "couseDetail": {
+      "type": "json"
+    },
+    "ratings": {
+      "type": "component",
+      "repeatable": true,
+      "component": "images.copany-rating"
+    },
+    "score": {
+      "type": "string"
+    },
+    "scoreImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

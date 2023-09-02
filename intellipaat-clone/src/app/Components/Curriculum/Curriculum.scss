@@ -1,0 +1,146 @@
+.curriculum {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0px;
+    .curiculum-container {
+        // background-color: rgb(247, 247, 247);
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        .module-parts {
+            .part1 {
+                .header {
+                    display: flex;
+                    column-gap: 30px;
+                    .head {
+                        column-gap: 20px;
+                        display: flex;
+                        align-items: center;
+                        .blue {
+                            font-size: 15px;
+                            color: var(--blue-color);
+                        }
+                        .green {
+                            font-size: 15px;
+                            color: green;
+                        }
+                    }
+
+                    .download-btn {
+                        display: none;
+                    }
+                }
+
+                .module {
+                    cursor: pointer;
+                    // box-sizing: 0px 4px 16px rgb( 0 0 0/8%);
+
+                    padding: 15px;
+                    .item {
+                        display: flex;
+                        flex-direction: column;
+
+                        .discription {
+                            box-shadow: 0 2px 16px rgb(0 0 0/8%);
+                            background-color: white;
+                            padding: 20px  50px;
+                            padding-left: 20px;
+
+                            // .list {
+                            //     margin-left: 30px;
+                            // }
+                            ul , li {
+                                margin-left: 30px;
+                            }
+                            ol {
+                                margin-block: 20px;
+                            }
+                        }
+                    }
+                }
+
+                .desclaimer {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 15px 10px;
+                    row-gap: 20px;
+                    border: 1px dashed var(--orange-color);
+                    box-shadow: 0px 4px 8px rgb(0 0 0/8%);
+                    h3 {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .desc {
+                        // background-color: red;
+                        font-size: 14px;
+                        color: rgb(34, 34, 34);
+                    }
+                }
+            }
+            .part2 {
+                display: none;
+            }
+        }
+        .interested-program {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .curriculum {
+        .curiculum-container {
+            // background-color: rgb(247, 247, 247);
+            width: 80%;
+
+            .module-parts {
+                .part1 {
+                    flex: 2;
+                    .header {
+                        .download-btn {
+                            display: block;
+                        }
+                    }
+                    .interested-program {
+                        display: flex;
+                    }
+                }
+                .part2 {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .curriculum {
+        .curiculum-container {
+            // background-color: rgb(247, 247, 247);
+            width: 80%;
+
+            .module-parts {
+                display: flex;
+
+                .part1 {
+                    flex: 2;
+                    .header {
+                        .download-btn {
+                            display: block;
+                        }
+                    }
+                    .interested-program {
+                        display: flex;
+                    }
+                }
+                .part2 {
+                    flex: 1;
+                    display: flex;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

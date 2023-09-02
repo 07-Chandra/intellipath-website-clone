@@ -1,0 +1,278 @@
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    padding: 30px 0px;
+    background-color: #f5f8fb;
+    .review-container {
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 60px;
+
+        .header {
+
+            .stars {
+                display: flex;
+                column-gap: 10px;
+                align-items: center;
+                margin-block: 15px;
+
+                .val {
+                    font-size: 30px;
+                }
+
+                .rate {
+                    font-size: 25px;
+                }
+
+                .img {
+                    // position: absolute;
+                    top: 0;
+                    left: 0;
+                    // background-image: url("https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175");
+                    width: 106px;
+                    height: 15px;
+                    background-position: -4px -271px;
+                    content: "";
+                }
+            }
+        }
+
+        .all-review-list {
+            display: flex;
+            justify-content: center;
+
+            .review-list {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                border-bottom: 3px solid var(--blue-color);
+                // width: 400px;
+                box-shadow: 0 4px 16px rgb(0 0 0/15%);
+                max-width: 440px;
+
+                .image-wrapper {
+                    width: 100%;
+                }
+                .name {
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px 20px;
+                    max-width: 490px;
+
+                    .para {
+                        font-size: 17px;
+                    }
+                    .icon-div {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: var(--blue-color);
+                        cursor: pointer;
+
+                        .icon {
+                            width: 80%;
+                            height: 80%;
+                            color: white;
+                            font-size: 26px;
+                        }
+                    }
+                }
+            }
+            .list1 {
+                display: none;
+            }
+            .list2 {
+                display: none;
+            }
+        }
+
+        .all-user {
+            display: flex;
+            justify-content: center;
+            .user {
+                max-width: 440px;
+                display: flex;
+                flex-direction: column;
+                padding: 35px 20px;
+
+                box-shadow: 0 4px 16px rgb(0 0 0/15%);
+                row-gap: 40px;
+                border-top: 3px solid coral;
+                border-radius: 5px;
+                .info-div {
+                    display: flex;
+                    column-gap: 15px;
+                    .image-wrapper {
+                        width: 60px;
+                        height: 60px;
+                    }
+                    .info {
+                        // .img {
+
+                        //     background-image: url("https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175");
+                        //     width: 100px;
+                        //     height: 50px;
+                        //     background-position: -4px -271px;
+                        //     content: "";
+                        // }
+                    }
+                }
+            }
+
+            .user1 {
+                display: none;
+            }
+
+            .user2 {
+                display: none;
+            }
+        }
+
+        .hiring-partners {
+            display: flex;
+            justify-content: center;
+            .partners {
+                max-width: 440px;
+                display: flex;
+                flex-direction: column;
+                padding: 35px 20px;
+                // justify-content: space-between;
+                box-shadow: 0 4px 16px rgb(0 0 0/15%);
+                row-gap: 20px;
+                // border-top: 3px solid coral;
+                border-radius: 5px;
+                .info-div {
+                    display: flex;
+                    column-gap: 15px;
+                    .image-wrapper {
+                        width: 60px;
+                    }
+                    .info {
+                        flex-grow: 10;
+                        // .img {
+
+                        //     background-image: url("https://intellipaat.com/wp-content/themes/intellipaat/images/master-course-sprite.svg?tr=w-400,h-175");
+                        //     width: 100px;
+                        //     height: 50px;
+                        //     background-position: -4px -271px;
+                        //     content: "";
+                        // }
+                    }
+                }
+            }
+            .partners1 {
+                display: none;
+            }
+            .partners2 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .review {
+        .review-container {
+            row-gap: 50px;
+
+
+            .header{
+                display: flex;
+                justify-content: space-between;
+            }
+            .all-review-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 20px;
+
+                .review-list {
+                    .name {
+                        padding: 10px;
+                    }
+                }
+                .list1 {
+                    display: flex;
+                }
+            }
+
+            .all-user {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 10px;
+
+                .user {
+                    row-gap: 25px;
+                }
+                .user1 {
+                    display: flex;
+                }
+            }
+
+            .hiring-partners {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 20px;
+                .partners {
+                    max-width: 400px;
+                }
+                .partners1 {
+                    display: flex;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .review {
+        .review-container {
+            padding: 20px;
+            width: 80%;
+            .all-review-list {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 10px;
+
+                .review-list {
+                    max-width: 360px;
+                }
+                .list2 {
+                    display: flex;
+                }
+            }
+
+            .all-user {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                column-gap: 10px;
+                .user {
+                    max-width: 360px;
+                }
+                .user2 {
+                    display: flex;
+                }
+            }
+
+            .hiring-partners {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 40px;
+                .partners {
+                    width: 100%;
+                    max-width: none;
+                }
+                .partners2 {
+                    display: flex;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cloud_computings",
+  "info": {
+    "singularName": "cloud-computing",
+    "pluralName": "cloud-computings",
+    "displayName": "cloudComputing",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Program": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.program"
+    },
+    "Course": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.course"
+    },
+    "mentors": {
+      "type": "component",
+      "repeatable": true,
+      "component": "sub-components.mentors"
+    },
+    "project": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.project"
+    },
+    "review": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.reviews"
+    },
+    "transition": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.transition"
+    },
+    "services": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.services"
+    },
+    "hero": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.hero"
+    }
+  }
+}

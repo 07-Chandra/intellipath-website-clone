@@ -1,0 +1,88 @@
+.interested {
+    width: 80%;
+    display: flex;
+    // justify-content: center;
+    .interest-container {
+        width: 100%;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 20px 20px;
+        color: white;
+        background: linear-gradient(
+            89.98deg,
+            rgba(129, 69, 237, 0.88) 0.01%,
+            rgba(46, 113, 191, 0.88) 99.99%
+        );
+        .form-inputs {
+            // width: 60%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+
+            input {
+                border-radius: 5px;
+                width: 50%;
+                border: none;
+                padding: 11px 15px;
+                background-color: white;
+                border: 1px solid rgb(122, 122, 122);
+
+                &::placeholder {
+                    font-size: 15px;
+                    font-weight: 480;
+                }
+            }
+            .number {
+                display: flex;
+                column-gap: 12px;
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    column-gap: 15px;
+                    width: 120px;
+                    border: none;
+                    padding: 11px 15px;
+                    // background-color: rgba(255, 255, 255, 0.84);
+                    background-color: white;
+                    border: 1px solid rgb(122, 122, 122);
+                    color: #757575;
+                    font-weight: normal;
+                    border-radius: 5px;
+                    font-size: 16px;
+                }
+            }
+
+            .submit-btn{
+                display: flex;
+                justify-content: center;
+            }
+            
+        }
+
+        .box {
+            padding: 5px 15px;
+            display: flex;
+            column-gap: 10px;
+
+            p {
+                color: white;
+                font-size: 13px;
+                line-height: 20px;
+
+                span {
+                    font-weight: normal;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .interested{
+        width: 90%;
+    }
+}
