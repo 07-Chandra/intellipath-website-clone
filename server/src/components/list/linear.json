@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_list_linears",
+  "info": {
+    "displayName": "nestedType",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "quary": {
+      "type": "string"
+    },
+    "ans": {
+      "type": "json"
+    },
+    "list": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

@@ -51,6 +51,16 @@
       "type": "component",
       "repeatable": false,
       "component": "sub-components.hero"
+    },
+    "admission": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.admission"
+    },
+    "cohort": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.cohort"
     }
   }
 }

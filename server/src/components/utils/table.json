@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_utils_tables",
+  "info": {
+    "displayName": "table"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "imgName": {
+      "type": "string"
+    },
+    "item1": {
+      "type": "string"
+    },
+    "item2": {
+      "type": "string"
+    }
+  }
+}

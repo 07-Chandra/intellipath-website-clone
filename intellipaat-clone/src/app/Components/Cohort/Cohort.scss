@@ -76,12 +76,16 @@
                 }
 
                 .icon-div {
+                    // width: 25px;
+                    // height: 25px;
                     display: flex;
                     align-items: center;
                     column-gap: 15px;
                     color: rgb(100, 100, 100);
 
                     .icon {
+                        width: 25px;
+                        height: 25px;
                         font-size: 18px;
                     }
                 }
@@ -122,16 +126,25 @@
                 border: 1px solid rgb(140, 140, 140);
             }
 
-            .ans{
+            .ans {
                 padding: 10px 40px;
 
-                p{
+                .unpoint {
                     background-color: white;
+                    // color: red;
                     line-height: 28px;
                     margin-block: 20px;
+                    list-style-type: none;
+                }
+                .point {
+                    background-color: white;
+                    // color: red;
+                    line-height: 10px;
+                    margin-block: 20px;
+                    margin-left: 30px;
                 }
 
-                ul{
+                ul {
                     margin-left: 30px;
                 }
             }
@@ -318,6 +331,7 @@
                             display: flex;
                             align-items: center;
                             column-gap: 15px;
+                            height: 20px;
                             color: rgb(100, 100, 100);
 
                             .icon {

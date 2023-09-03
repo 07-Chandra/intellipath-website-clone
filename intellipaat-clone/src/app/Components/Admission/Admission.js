@@ -1,86 +1,54 @@
 import React from "react";
 import "./Admission.scss";
 
-function Admission() {
+function Admission({ data }) {
+    const cardsData = data ? data?.cards : "";
     return (
         <div className="admission">
             <div className="admission-container">
                 <div className="header">
-                    <h2 className="heading">
-                        Admission <span>Details</span>
-                    </h2>
-                    <p>
-                        The application process consists of three simple steps.
-                        An offer of admission will be made to selected
-                        candidates based on the feedback from the interview
-                        panel. The selected candidates will be notified over
-                        email and phone, and they can block their seats through
-                        the payment of the admission fee.
-                    </p>
+                    <h2 className="heading">{data?.title}</h2>
+                    <p>{data?.desc}</p>
                 </div>
 
                 <div className="all-application">
-                    <div className="application ">
-                        <div className="image-wrapper">
-                            <img
-                                src="https://intellipaat.com/course-image/2021/05/ad-submit.png"
-                                alt=""
-                            />
-                        </div>
+                    {cardsData
+                        ? cardsData?.map((item, id) => {
+                              return (
+                                  <div className="application ">
+                                      <div className="image-wrapper">
+                                          <img
+                                              src={
+                                                  item?.profileImg?.data
+                                                      .attributes.url
+                                              }
+                                              alt=""
+                                          />
+                                      </div>
 
-                        <h2 className="subheading">Submit Application</h2>
+                                      <h2 className="subheading">
+                                          {item.name}
+                                      </h2>
 
-                        <p>
-                            Tell us a bit about yourself and why you want to
-                            join this program
-                        </p>
-                    </div>
-                    <div className="application green">
-                        <div className="image-wrapper">
-                            <img
-                                src="https://intellipaat.com/course-image/2021/05/ad-review.png"
-                                alt=""
-                            />
-                        </div>
-
-                        <h2 className="subheading">Application Review</h2>
-
-                        <p>
-                            An admission panel will shortlist candidates based
-                            on their application
-                        </p>
-                    </div>
-                    <div className="application yellow">
-                        <div className="image-wrapper">
-                            <img
-                                src="https://intellipaat.com/course-image/2021/05/ad-admission-1.png"
-                                alt=""
-                            />
-                        </div>
-
-                        <h2 className="subheading">Application Review</h2>
-
-                        <p>
-                            Selected candidates will be notified within 1–2
-                            weeks you want to join this program
-                        </p>
-                    </div>
+                                      <p>{item.about}</p>
+                                  </div>
+                              );
+                          })
+                        : ""}
                 </div>
             </div>
             <div className="program">
                 <div className="cover">
-                    <h2 className="heading">
-                        Program <span>Fees</span>{" "}
+                    <h2 className="heading" style={{ alignSelf: "flex-start" }}>
+                        <span>{data?.programName}</span>
                     </h2>
 
                     <div className="admission-fees">
                         <div className="item">
                             <div className="left-part">
-                                <h2 className="subheading">
-                                    Total Admission Fee
-                                </h2>
+                                <h2 className="subheading">{data?.adFees}</h2>
 
-                                <p className="price">₹ 80,028</p>
+                                <p className="price">₹ {data?.adPrice}</p>
                             </div>
 
                             <button className="btn">Apply Now</button>
@@ -88,55 +56,37 @@ function Admission() {
 
                         <div className="item">
                             <div className="left-part">
-                                <h2 className="subheading">
-                                    No Cost EMI Starts at
-                                </h2>
+                                <h2 className="subheading">{data.costFees}</h2>
 
-                                <p className="price">₹ 4,999</p>
+                                <p className="price">₹ {data?.costPrice}</p>
                             </div>
 
                             <div className="right-part">
-                                <p>
-                                    We partnered with financing companies to
-                                    provide competitive finance option at 0%
-                                    interest rate with no hidden costs
-                                </p>
+                                <p>{data?.partner}</p>
 
-                                <h2 className="subheading">
-                                    Financing Partners
-                                </h2>
+                                <h2 className="subheading">{data?.fPartner}</h2>
 
                                 <div className="image-wrapper">
                                     <img
-                                        src="https://intellipaat.com/wp-content/themes/intellipaat/images/pg-fee-web.png"
+                                        src={data?.img?.data.attributes.url}
                                         alt="company"
                                     />
                                 </div>
-                                <p className="color">
-                                    The credit facility is provided by a third
-                                    party credit facility provider and any
-                                    arrangement with such third party is outside
-                                    Intellipaat’s purview.
-                                </p>
+                                <p className="color"> {data?.parternBottom}</p>
                             </div>
+                            <div className="temp-part"></div>
                         </div>
 
                         <div className="item">
                             <div className="left">
                                 <h2 className="subheading">
-                                    Upcoming Application Deadline
+                                    {data?.upDeadline}
                                 </h2>
 
-                                <div className="price orange">
-                                    19th Aug 2023
-                                </div>
+                                <div className=" orange">{data?.date}</div>
                             </div>
                         </div>
-                        <p className="bottom-para">
-                            Admissions are closed once the requisite number of
-                            participants enroll for the upcoming cohort. Apply
-                            early to secure your seat.
-                        </p>
+                        <p className="bottom-para">{data?.aboutDeadline}</p>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sub_components_cohorts",
+  "info": {
+    "displayName": "cohort",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "module1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.linear"
+    },
+    "table": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.table"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "list.nested"
+    },
+    "extra": {
+      "type": "string"
+    }
+  }
+}

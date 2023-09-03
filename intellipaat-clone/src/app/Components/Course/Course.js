@@ -8,7 +8,7 @@ function Course({ course }) {
     const allRoles = course ? course.allRoles : " ";
     const skills = course ? course.skills : " ";
 
-    const image = (course) ? course.img.data.attributes.url : " ";
+    const image = (course) ? course?.img?.data.attributes.url : " ";
     console.log("image" , image);
     // console.log("all Roles", allRoles);
     return (

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_list_nesteds",
+  "info": {
+    "displayName": "linearType",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "item": {
+      "type": "string"
+    }
+  }
+}

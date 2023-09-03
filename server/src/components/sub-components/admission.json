@@ -1,0 +1,64 @@
+{
+  "collectionName": "components_sub_components_admissions",
+  "info": {
+    "displayName": "Admission",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc": {
+      "type": "text"
+    },
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.review-center"
+    },
+    "programName": {
+      "type": "string"
+    },
+    "adFees": {
+      "type": "string"
+    },
+    "costFees": {
+      "type": "string"
+    },
+    "adPrice": {
+      "type": "string"
+    },
+    "costPrice": {
+      "type": "string"
+    },
+    "partner": {
+      "type": "text"
+    },
+    "fPartner": {
+      "type": "string"
+    },
+    "parternBottom": {
+      "type": "string"
+    },
+    "upDeadline": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "aboutDeadline": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
