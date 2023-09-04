@@ -23,7 +23,9 @@ function Home() {
         try {
             const program = await axiosClient.get(
                 // "http://localhost:1337/api/cloud-computings?populate[cohort][populate]=module1,table.img&populate[admission][populate]=img,cards.profileImg&populate[services][populate]=img,alumniImg,allInfo.img,buttons.img,peerImages.img&populate[hero][populate]=scoreImage,ratings.img&?populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
-                "http://localhost:1337/api/cloud-computings?populate[cohort][populate]=features,module1,table.img&populate[admission][populate]=img,cards.profileImg&populate[services][populate]=img,alumniImg,allInfo.img,buttons.img,peerImages.img&populate[hero][populate]=scoreImage,ratings.img&populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
+                // "http://localhost:1337/api/cloud-computings?populate[cohort][populate]=features,module1,table.img&populate[admission][populate]=img,cards.profileImg&populate[services][populate]=img,alumniImg,allInfo.img,buttons.img,peerImages.img&populate[hero][populate]=scoreImage,ratings.img&populate[Program][populate]=*&populate[Course][populate]=*?&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
+                // "/cloud-computings?populate[curriculam][populate]=module1,modules,highlightItem.img&populate[cohort][populate]=features,module1,table.img&populate[admission][populate]=img,cards.profileImg&populate[services][populate]=img,alumniImg,allInfo.img,buttons.img,peerImages.img&populate[hero][populate]=scoreImage,ratings.img&populate[Program][populate]=*&populate[Course][populate]=*&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
+                "http://localhost:1337/api/cloud-computings?populate[curriculam][populate]=module1,modules,highlightItem.img&populate[cohort][populate]=features,module1,table.img&populate[admission][populate]=img,cards.profileImg&populate[services][populate]=img,alumniImg,allInfo.img,buttons.img,peerImages.img&populate[hero][populate]=scoreImage,ratings.img&populate[Program][populate]=*&populate[Course][populate]=allRoles,applyRules,skills,img,allImages.img&populate[mentors][populate]=*&populate[project][populate]=advancement.img,img?&populate[review][populate]=reviewTop.profileImg,reviewCenter.profileImg,reviewBottom.profileImg,img,reviewTop.log,reviewBottom.icon?&populate[transition][populate]=features.img,status.img,company.img,arrowImg,nextCompany.img,img"
             );
 
             const programRes = await program?.data?.data;
@@ -54,7 +56,9 @@ function Home() {
             />
             <Course course={apiData ? apiData[0]?.attributes.Course : ""} />
             <Mentors mentors={apiData ? apiData[0]?.attributes.mentors : ""} />
-            {/* <Curriculum /> */}
+            <Curriculum
+                data={apiData ? apiData[0]?.attributes.curriculam : ""}
+            />
             <Project project={apiData ? apiData[0]?.attributes.project : ""} />
             <Reviews review={apiData ? apiData[0]?.attributes.review : ""} />
             <Services data={apiData ? apiData[0]?.attributes.services : ""} />

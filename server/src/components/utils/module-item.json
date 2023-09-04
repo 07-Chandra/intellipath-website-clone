@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_sub_components_module_items",
+  "info": {
+    "displayName": "moduleItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "upper": {
+      "type": "json"
+    },
+    "listType": {
+      "type": "enumeration",
+      "enum": [
+        "ul",
+        "ol ",
+        "none"
+      ],
+      "default": "ol "
+    },
+    "btn": {
+      "type": "string",
+      "default": "Download Brochure"
+    },
+    "lower": {
+      "type": "json"
+    }
+  }
+}

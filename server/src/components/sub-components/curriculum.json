@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_sub_components_curricula",
+  "info": {
+    "displayName": "Curriculum",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "course1": {
+      "type": "string"
+    },
+    "course2": {
+      "type": "string"
+    },
+    "modules": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.module-item",
+      "lower": {
+        "type": "component",
+        "repeatable": true,
+        "component": "list.json-array"
+      }
+    },
+    "desc": {
+      "type": "string"
+    },
+    "about": {
+      "type": "text"
+    },
+    "programName": {
+      "type": "string"
+    },
+    "highlightItem": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.icon-about"
+    },
+    "title2": {
+      "type": "string"
+    },
+    "module1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "utils.module-item"
+    }
+  }
+}

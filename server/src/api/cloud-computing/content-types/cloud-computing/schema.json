@@ -61,6 +61,11 @@
       "type": "component",
       "repeatable": false,
       "component": "sub-components.cohort"
+    },
+    "curriculam": {
+      "type": "component",
+      "repeatable": false,
+      "component": "sub-components.curriculum"
     }
   }
 }

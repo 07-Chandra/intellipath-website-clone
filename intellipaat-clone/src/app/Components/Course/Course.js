@@ -7,9 +7,13 @@ function Course({ course }) {
     const applyRules = course ? course.applyRules : "";
     const allRoles = course ? course.allRoles : " ";
     const skills = course ? course.skills : " ";
+    const allImages = course ? course?.allImages : "";
+    const show1 = allImages ? allImages.slice(3) : "";
+    const show2 = allImages ? allImages.slice(3, 5) : "";
+    const show3 = allImages ? allImages.slice(6, allImages.length) : "";
 
-    const image = (course) ? course?.img?.data.attributes.url : " ";
-    console.log("image" , image);
+    const image = course ? course?.img?.data.attributes.url : " ";
+    console.log("image", image);
     // console.log("all Roles", allRoles);
     return (
         <div className="course">
@@ -40,10 +44,7 @@ function Course({ course }) {
                     </div>
                     <div className="girl">
                         <div className="image-size">
-                            <img
-                                src={image}
-                                alt=""
-                            />
+                            <img src={image} alt="" />
                         </div>
                     </div>
                 </div>
@@ -113,71 +114,65 @@ function Course({ course }) {
                         <p className="subheading">Tools to Master</p>
                         <div className="tool">
                             <div className="show1">
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2017/09/AWS.jpg"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2019/01/kubernetes.png"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2018/04/docker.png"
-                                        alt="aws"
-                                    />
-                                </div>
+                                {show1
+                                    ? show1.map((image, id) => {
+                                          return (
+                                              <div
+                                                  className="image-wrapper"
+                                                  key={id}
+                                              >
+                                                  <img
+                                                      src={
+                                                          image?.img?.data
+                                                              .attributes.url
+                                                      }
+                                                      alt="aws"
+                                                  />
+                                              </div>
+                                          );
+                                      })
+                                    : ""}
                             </div>
 
                             <div className="show1 show2">
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2018/04/ansible.png"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2021/04/Terraform.png"
-                                        alt="aws"
-                                    />
-                                </div>
+                                {show2
+                                    ? show2.map((image, id) => {
+                                          return (
+                                              <div
+                                                  className="image-wrapper"
+                                                  key={id}
+                                              >
+                                                  <img
+                                                      src={
+                                                          image?.img?.data
+                                                              .attributes.url
+                                                      }
+                                                      alt="aws"
+                                                  />
+                                              </div>
+                                          );
+                                      })
+                                    : ""}
                             </div>
                             <div className="show1 show3">
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2018/04/puppet.png"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2018/04/chef.png"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2017/08/AWSLambda.png"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2018/04/selenium.png"
-                                        alt="aws"
-                                    />
-                                </div>
-                                <div className="image-wrapper">
-                                    <img
-                                        src="https://intellipaat.com/course-image/2018/04/jenkins.png"
-                                        alt="aws"
-                                    />
-                                </div>
+                                {show3
+                                    ? show3.map((image, id) => {
+                                          return (
+                                              <div
+                                                  className="image-wrapper"
+                                                  key={id}
+                                              >
+                                                  <img
+                                                      src={
+                                                          image?.img?.data
+                                                              .attributes.url
+                                                      }
+                                                      alt="aws"
+                                                  />
+                                              </div>
+                                          );
+                                      })
+                                    : ""}
                             </div>
                         </div>
                         <p className="view">View More</p>
