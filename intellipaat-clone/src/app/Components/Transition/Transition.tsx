@@ -8,7 +8,7 @@ function Transition({ data }) {
 
     const features = data ? data.features : "";
 
-    console.log("url ", features);
+    // console.log("url ", features);
     return (
         <div className="container">
             <div className="transition">

@@ -44,7 +44,7 @@ function Cohort({ data }) {
                         {newTable
                             ? newTable.map((item, id) => {
                                   return (
-                                      <div className="icon-div">
+                                      <div className="icon-div" key={id}>
                                           <img
                                               src={
                                                   item?.img?.data?.attributes
@@ -64,7 +64,7 @@ function Cohort({ data }) {
                         {newTable
                             ? newTable.map((item, id) => {
                                   return (
-                                      <div className="icon-div">
+                                      <div className="icon-div" key={id}>
                                           <img
                                               src={
                                                   item?.img?.data?.attributes
@@ -89,7 +89,7 @@ function Cohort({ data }) {
                     {table
                         ? table.map((item, id) => {
                               return (
-                                  <div className=" column col1">
+                                  <div className=" column col1" key={id}>
                                       <div className="row1">
                                           <div className="icon-div">
                                               <img
@@ -111,45 +111,6 @@ function Cohort({ data }) {
                               );
                           })
                         : ""}
-
-                    {/* <div className=" column col1">
-                        <span></span>
-                        <span>Program Induction</span>
-                        <span>Regular Classes</span>
-                    </div>
-                    <div className="column col2">
-                        <div className="row1">
-                            <div className="icon-div">
-                                <BsCalendarMinus className="icon" />
-                            </div>
-                            <div className="para">Date</div>
-                        </div>
-
-                        <span> 19th Aug 2023</span>
-                        <span> 19th Aug 2023</span>
-                    </div>
-                    <div className="column col3">
-                        <div className="row1">
-                            <div className="icon-div">
-                                <BiTimeFive className="icon" />
-                            </div>
-                            <div className="para">Time</div>
-                        </div>
-
-                        <span> 08:00 PM IST</span>
-                        <span> 08:00 PM IST</span>
-                    </div>
-                    <div className="column col4">
-                        <div className="row1">
-                            <div className="icon-div">
-                                <SlCalender className="icon" />
-                            </div>
-                            <div className="para">Time</div>
-                        </div>
-
-                        <span> Weekend (Sat-Sun)</span>
-                        <span> Weekend (Sat-Sun)</span>
-                    </div> */}
 
                     <div className="center center1">
                         <button className="btn">Apply Now</button>
@@ -186,13 +147,14 @@ function Cohort({ data }) {
                                               ([key, value]) => {
                                                   return (
                                                       <li
+                                                          key={key}
                                                           className={
                                                               item?.list
                                                                   ? "point"
                                                                   : "unpoint"
                                                           }
                                                       >
-                                                          {value}
+                                                          {String(value)}
                                                       </li>
                                                   );
                                               }
@@ -217,7 +179,7 @@ function Cohort({ data }) {
                         {features
                             ? features.map((item, id) => {
                                   return (
-                                      <div className="item">
+                                      <div className="item" key={id}>
                                           <AiOutlineCheck className="icon" />
                                           <span>{item.item}</span>
                                       </div>

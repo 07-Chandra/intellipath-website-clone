@@ -54,13 +54,12 @@
                             // }
                             .nested {
                                 margin-block: 10px;
-
                             }
-                            .ul{
-                            //  list-style-type: inside; 
-                            //  background-color: green;  
+                            .ul {
+                                //  list-style-type: inside;
+                                //  background-color: green;
                             }
-                            .ol{
+                            .ol {
                                 list-style-type: circle;
                                 // background-color: red;
                             }
@@ -145,15 +144,15 @@
                             display: block;
                         }
                     }
-                    .interested-program {
-                        display: flex;
-                    }
                 }
                 .part2 {
                     flex: 1;
                     display: flex;
                     margin-top: 20px;
                 }
+            }
+            .interested-program {
+                display: flex;
             }
         }
     }

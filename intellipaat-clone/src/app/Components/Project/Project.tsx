@@ -11,7 +11,7 @@ function Project({ project }) {
     // console.log("project data", aboutHosting);
 
     const [level, setLevel] = useState(1);
-    console.log(level);
+    // console.log(level);
     return (
         <div className="project">
             <div className="project-container">
@@ -46,10 +46,12 @@ function Project({ project }) {
                     {Object.entries(stage).map(([key, value]) => (
                         <button
                             key={key}
-                            className={`btn ${level == key ? "start" : ""}`}
-                            onClick={() => setLevel(key)}
+                            className={`btn ${
+                                Number(level) == Number(key) ? "start" : null
+                            }`}
+                            onClick={() => setLevel(Number(key))}
                         >
-                            {value}
+                            {`${value}`}
                         </button>
                     ))}
                 </div>
@@ -59,7 +61,7 @@ function Project({ project }) {
                         {Object.entries(levelOne).map(([key, value]) => (
                             <div className="sponsor" key={key}>
                                 <h2 className="subheading">{key}</h2>
-                                <p>{value}</p>
+                                <p>{`${value}`}</p>
                             </div>
                         ))}
                     </div>
@@ -72,7 +74,7 @@ function Project({ project }) {
                         {Object.entries(levelTwo).map(([key, value]) => (
                             <div className="sponsor" key={key}>
                                 <h2 className="subheading">{key}</h2>
-                                <p>{value}</p>
+                                <p>{`${value}`}</p>
                             </div>
                         ))}
                     </div>
@@ -85,7 +87,7 @@ function Project({ project }) {
                         {Object.entries(levelThree).map(([key, value]) => (
                             <div className="sponsor" key={key}>
                                 <h2 className="subheading">{key}</h2>
-                                <p>{value}</p>
+                                <p>{`${value}`}</p>
                             </div>
                         ))}
                     </div>
@@ -95,9 +97,7 @@ function Project({ project }) {
 
                 <div className="success">
                     <div className="top">
-                        <p>
-                          {project.percent}
-                        </p>
+                        <p>{project.percent}</p>
                     </div>
                     <div className="bottom">
                         <div className="image-wrapper">

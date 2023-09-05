@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Admission from "./Components/Admission/Admission";
-import Cohort from "./Components/Cohort/Cohort";
-import Course from "./Components/Course/Course";
-import Curriculum from "./Components/Curriculum/Curriculum";
-import Hero from "./Components/Hero/Hero";
-import Mentors from "./Components/Mentors/Mentors";
-import Program from "./Components/Program/Program";
-import Project from "./Components/Project/Project";
-import Reviews from "./Components/Reviews/Reviews";
-import Services from "./Components/Services/Services";
-import Transition from "./Components/Transition/Transition";
+import Admission from "./Components/Admission/Admission.tsx";
+import Cohort from "./Components/Cohort/Cohort.tsx";
+import Course from "./Components/Course/Course.tsx";
+import Curriculum from "./Components/Curriculum/Curriculum.tsx";
+import Hero from "./Components/Hero/Hero.tsx";
+import Mentors from "./Components/Mentors/Mentors.tsx";
+import Program from "./Components/Program/Program.tsx";
+import Project from "./Components/Project/Project.tsx";
+import Reviews from "./Components/Reviews/Reviews.tsx";
+import Services from "./Components/Services/Services.tsx";
+import Transition from "./Components/Transition/Transition.tsx";
 import Contact from "./SubComponents/Contact/Contact";
 import { axiosClient } from "./Utils/axiosClient";
 import axios from "axios";

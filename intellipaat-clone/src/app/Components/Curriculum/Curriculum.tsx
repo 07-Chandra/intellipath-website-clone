@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 import "./Curriculum.scss";
 
+// import Interested from "@/app/SubComponents/Interested/Interested.tsx";
 import Interested from "@/app/SubComponents/Interested/Interested";
 import Highlight from "@/app/SubComponents/Highlight/Highlight";
 import Points from "@/app/SubComponents/Points/Points";
@@ -107,6 +108,7 @@ function Curriculum({ data }) {
                                                   }
                                               >
                                                   <Points name={item?.name} />
+                                                  {/* <Points name={item?.name} /> */}
                                               </div>
 
                                               {count == id + 1 ? (
@@ -127,7 +129,7 @@ function Curriculum({ data }) {
                                                                               ) +
                                                                               1 +
                                                                               ". " +
-                                                                              value
+                                                                              `${value}`
                                                                           ) : item?.listType ==
                                                                             "ul" ? (
                                                                               <li
@@ -137,27 +139,11 @@ function Curriculum({ data }) {
                                                                                           "-10px",
                                                                                   }}
                                                                               >
-                                                                                  {
-                                                                                      value
-                                                                                  }
+                                                                                  {`${value}`}
                                                                               </li>
                                                                           ) : (
-                                                                              value
+                                                                              `${value}`
                                                                           )}
-
-                                                                          {/* {item?.listType ==
-                                                                      "ul" ? (
-                                                                          <li>
-                                                                              {Number(
-                                                                                  key
-                                                                              ) +
-                                                                                  1 +
-                                                                                  "  " +
-                                                                                  value}
-                                                                          </li>
-                                                                      ) : (
-                                                                          value
-                                                                      )} */}
                                                                       </span>
                                                                   </p>
                                                                   <ul>
@@ -202,6 +188,12 @@ function Curriculum({ data }) {
                                                               </div>
                                                           );
                                                       })}
+
+                                                      {/* <div className="download-btn"> */}
+                                                      <button className="broch-btn">
+                                                          {item.btn}
+                                                      </button>
+                                                      {/* </div> */}
                                                   </div>
                                               ) : (
                                                   " "
@@ -243,9 +235,7 @@ function Curriculum({ data }) {
                                                               <div key={key}>
                                                                   <p className="nested">
                                                                       <span>
-                                                                          {
-                                                                              value
-                                                                          }
+                                                                          {`${value}`}
                                                                       </span>
                                                                   </p>
                                                                   <ul>
@@ -290,6 +280,9 @@ function Curriculum({ data }) {
                                                               </div>
                                                           );
                                                       })}
+                                                      <button className="broch-btn">
+                                                          {item.btn}
+                                                      </button>
                                                   </div>
                                               ) : (
                                                   " "

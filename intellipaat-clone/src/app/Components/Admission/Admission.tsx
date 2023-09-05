@@ -15,7 +15,7 @@ function Admission({ data }) {
                     {cardsData
                         ? cardsData?.map((item, id) => {
                               return (
-                                  <div className="application ">
+                                  <div className="application " key={id}>
                                       <div className="image-wrapper">
                                           <img
                                               src={

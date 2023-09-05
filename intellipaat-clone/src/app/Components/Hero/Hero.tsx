@@ -1,14 +1,15 @@
 import React from "react";
 import "./Hero.scss";
 import Contact from "@/app/SubComponents/Contact/Contact";
+// import Test from "../Test";
 
 function Hero({ props }) {
-    const data  = props;
+    const data = props;
     const courseDetail = props ? props?.couseDetail : "";
     const companyRatings = props ? props?.ratings : "";
     const dataArray = [];
-    
-    console.log("hero data is ", companyRatings);
+
+    console.log("hero data is ", courseDetail);
     // if (props) {
     //     for (const key in companyRatings) {
     //         if (key !== "id") {
@@ -18,13 +19,11 @@ function Hero({ props }) {
     //     }
     // }
 
-
-
     const score = props ? props?.score : "";
 
-    if (props) {
-        console.log(props[0]?.id);
-    }
+    // if (props) {
+    //     console.log(props[0]?.id);
+    // }
 
     return (
         <div className="hero">
@@ -57,23 +56,30 @@ function Hero({ props }) {
             <div className="advertise">
                 <div className="about-course">
                     {courseDetail
-                        ? Object.entries(courseDetail)?.map(([key, value]) => (
-                              <div className="feature" key={key}>
-                                  <p>{key}</p>
-                                  <h3>{value}</h3>
-                              </div>
-                          ))
+                        ? Object.entries(courseDetail)?.map(([key, pair]) => {
+                              return (
+                                  <div className="feature" key={key}>
+                                      <p>{key}</p>
+                                      <h3>{`${pair}`}</h3>
+                                  </div>
+                              );
+                          })
                         : ""}
                 </div>
 
                 <div className="ratings">
-                    {companyRatings ?  companyRatings?.map((image, id) => (
-                        <div className="border" key={id}>
-                            <div className="image-wrapper">
-                                <img src={image?.img?.data.attributes.url} alt="rating1" />
-                            </div>
-                        </div>
-                    )) : ""}
+                    {companyRatings
+                        ? companyRatings?.map((image, id) => (
+                              <div className="border" key={id}>
+                                  <div className="image-wrapper">
+                                      <img
+                                          src={image?.img?.data.attributes.url}
+                                          alt="rating1"
+                                      />
+                                  </div>
+                              </div>
+                          ))
+                        : ""}
                 </div>
 
                 <div className="success">

@@ -13,7 +13,7 @@ function Course({ course }) {
     const show3 = allImages ? allImages.slice(6, allImages.length) : "";
 
     const image = course ? course?.img?.data.attributes.url : " ";
-    console.log("image", image);
+    // console.log("image", image);
     // console.log("all Roles", allRoles);
     return (
         <div className="course">
@@ -38,7 +38,7 @@ function Course({ course }) {
                                 <div className="icon-div">
                                     <AiOutlineCheck className="icon" />
                                 </div>
-                                <p>{value}</p>
+                                <p>{`${value}`}</p>
                             </div>
                         ))}
                     </div>
@@ -60,7 +60,7 @@ function Course({ course }) {
                         {Object.entries(allRoles).map(([key, value]) => (
                             <div className="cart" key={key}>
                                 <h3>{key}</h3>
-                                <p>{value}</p>
+                                <p>{`${value}`}</p>
                             </div>
                         ))}
                     </div>
@@ -75,7 +75,7 @@ function Course({ course }) {
                                     .map(([key, value]) => (
                                         <div className="item" key={key}>
                                             <p>
-                                                <span>{value}</span>
+                                                <span>{`${value}`}</span>
                                             </p>
                                         </div>
                                     ))}
@@ -86,7 +86,7 @@ function Course({ course }) {
                                     .map(([key, value]) => (
                                         <div className="item" key={key}>
                                             <p>
-                                                <span>{value}</span>
+                                                <span>{`${value}`}</span>
                                             </p>
                                         </div>
                                     ))}
@@ -97,7 +97,7 @@ function Course({ course }) {
                                     .map(([key, value]) => (
                                         <div className="item" key={key}>
                                             <p>
-                                                <span>{value}</span>
+                                                <span>{`${value}`}</span>
                                             </p>
                                         </div>
                                     ))}

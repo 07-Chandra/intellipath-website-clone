@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import "./Services.scss";
 
+//  let value = String;
+
 function Services({ data }) {
-    console.log("service data ", data);
+    // console.log("service data ", data);
 
     const stages = data ? data?.stage : "";
     const [state, setState] = useState(0);
@@ -54,15 +56,19 @@ function Services({ data }) {
                             {stages
                                 ? Object.entries(stages).map(([key, value]) => (
                                       <div key={key}>
-                                          {console.log(key)}
+                                          {/* {console.log(key)} */}
                                           <button
                                               key={key}
                                               className={`btn1 ${
-                                                  state == key ? "start" : ""
+                                                  Number(state) == Number(key)
+                                                      ? "start"
+                                                      : ""
                                               }`}
-                                              onClick={() => setState(key)}
+                                              onClick={() =>
+                                                  setState(Number(key))
+                                              }
                                           >
-                                              {value}
+                                              {String(value)}
                                           </button>
                                       </div>
                                   ))

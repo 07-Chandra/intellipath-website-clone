@@ -7,7 +7,7 @@ function Reviews({ review }) {
     const reviewCenter = review ? review.reviewCenter : "";
     const reviewBottom = review ? review.reviewBottom : "";
 
-    console.log("review ", reviewBottom);
+    // console.log("review ", reviewBottom);
     return (
         <div className="review">
             <div className="review-container">
@@ -113,10 +113,7 @@ function Reviews({ review }) {
                                           </div>
 
                                           <div className="image-wrapper">
-                                              {console.log(
-                                                  "image url ",
-                                                  user?.icon?.data.attributes.url
-                                              )}
+                                            
                                               <img
                                                   src={
                                                       user?.icon?.data
