@@ -2,13 +2,11 @@ import React from "react";
 import "./Transition.scss";
 
 function Transition({ data }) {
-    // console.log("transition data" , data);
-
     const arrowImg = data ? data?.arrowImg?.data.attributes.url : "";
-
     const features = data ? data.features : "";
 
-    // console.log("url ", features);
+    console.log("transition data" , data);
+
     return (
         <div className="container">
             <div className="transition">

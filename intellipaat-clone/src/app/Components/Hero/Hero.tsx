@@ -1,29 +1,70 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.scss";
 import Contact from "@/app/SubComponents/Contact/Contact";
 // import Test from "../Test";
 
-function Hero({ props }) {
-    const data = props;
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface imgSchema {
+    id: number;
+    img: {
+        data: {
+            id: number;
+            attributes: imgAttributes;
+        };
+    };
+}
+
+interface HeroData {
+    props: {
+        id: number;
+        courseName: string;
+        courseBy: string;
+        aboutCourse: string;
+        seat: string;
+        country: string;
+        rank: string;
+        couseDetail: Record<string, string>;
+        score: string;
+        scoreImage: {
+            data: {
+                id: number;
+                attributes: imgAttributes;
+            };
+        };
+        ratings: Array<imgSchema>;
+    };
+}
+
+const Hero: React.FC<HeroData> = ({ props }) => {
+    console.log("props ", props);
+
+    let data = props;
     const courseDetail = props ? props?.couseDetail : "";
+
     const companyRatings = props ? props?.ratings : "";
-    const dataArray = [];
 
-    console.log("hero data is ", courseDetail);
-    // if (props) {
-    //     for (const key in companyRatings) {
-    //         if (key !== "id") {
-    //             const ratingData = companyRatings[key].data.attributes;
-    //             dataArray.push(ratingData);
-    //         }
-    //     }
-    // }
-
-    const score = props ? props?.score : "";
-
-    // if (props) {
-    //     console.log(props[0]?.id);
-    // }
+    const score: string = props ? props?.score : "";
 
     return (
         <div className="hero">
@@ -56,11 +97,11 @@ function Hero({ props }) {
             <div className="advertise">
                 <div className="about-course">
                     {courseDetail
-                        ? Object.entries(courseDetail)?.map(([key, pair]) => {
+                        ? Object.entries(courseDetail)?.map(([key, value]) => {
                               return (
                                   <div className="feature" key={key}>
                                       <p>{key}</p>
-                                      <h3>{`${pair}`}</h3>
+                                      <h3>{value}</h3>
                                   </div>
                               );
                           })
@@ -98,5 +139,5 @@ function Hero({ props }) {
             </div>
         </div>
     );
-}
+};
 export default Hero;

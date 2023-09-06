@@ -3,13 +3,11 @@ import "./Program.scss";
 
 import Caunselling from "@/app/SubComponents/Caunselling/Caunselling";
 function Program({ data }) {
-    // console.log("program data " , data);
+    console.log("program data " , data);
     const allPoints = data ? data?.points : " ";
     const achivements = data ? data.achivements : " ";
     const name = data ? data?.name : " ";
     const about = data ? data?.about : " ";
-
-    // console.log("image", data);
 
     return (
         <div className="program">
