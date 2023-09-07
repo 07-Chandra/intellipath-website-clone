@@ -1,9 +1,54 @@
 import React from "react";
 import "./Mentors.scss";
 import Interested from "@/app/SubComponents/Interested/Interested";
-function Mentors({ mentors }) {
-    const first = mentors ? mentors[0] : "";
-    const second = mentors ? mentors[1] : "";
+
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface arraySchema {
+    id: number;
+    name: string;
+    position: string;
+    about: string;
+    img: data;
+}
+
+interface mentorsData {
+    mentors: Array<arraySchema>;
+}
+const Mentors: React.FC<mentorsData> = ({ mentors }) => {
+    // console.log("mentors", mentors);
+
+    let first: arraySchema | undefined =
+        mentors && mentors.length > 0 ? mentors[0] : undefined;
+    let second: arraySchema | undefined =
+        mentors && mentors.length > 1 ? mentors[1] : undefined;
 
     return (
         <div className="mentors">
@@ -68,6 +113,6 @@ function Mentors({ mentors }) {
             </div>
         </div>
     );
-}
+};
 
 export default Mentors;

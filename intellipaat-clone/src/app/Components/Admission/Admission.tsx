@@ -1,8 +1,75 @@
 import React from "react";
 import "./Admission.scss";
 
-function Admission({ data }) {
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data;
+}
+
+interface cardSchema {
+    id: number;
+    name: string;
+    position: string;
+    about: string;
+    profileImg: data;
+}
+
+interface admissionData {
+    data: {
+        id: number;
+        title: string;
+        desc: string;
+        programName: string;
+        adFees: string;
+        costFees: string;
+        adPrice: string;
+        costPrice: string;
+        partner: string;
+        fPartner: string;
+        parternBottom: string;
+        upDeadline: string;
+        date: string;
+        aboutDeadline: string;
+        img: data;
+        cards: Array<cardSchema>;
+    };
+}
+
+const Admission: React.FC<admissionData> = ({ data }) => {
     const cardsData = data ? data?.cards : "";
+
+    // console.log("admission data", data);
+
     return (
         <div className="admission">
             <div className="admission-container">
@@ -92,6 +159,6 @@ function Admission({ data }) {
             </div>
         </div>
     );
-}
+};
 
 export default Admission;

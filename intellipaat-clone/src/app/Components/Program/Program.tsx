@@ -2,12 +2,54 @@ import React from "react";
 import "./Program.scss";
 
 import Caunselling from "@/app/SubComponents/Caunselling/Caunselling";
-function Program({ data }) {
-    console.log("program data " , data);
+
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface programData {
+    data: {
+        id: number;
+        name: string;
+        about: string;
+        points: Record<string, string>;
+        iitm: string;
+        aboutIitm: string;
+        achivements: Record<string, string>;
+        note: string;
+        certificate: {
+            data: {
+                id: number;
+                attributes: imgAttributes;
+            };
+        };
+    };
+}
+
+const Program: React.FC<programData> = ({ data }) => {
+    // console.log("program data ", data);
     const allPoints = data ? data?.points : " ";
     const achivements = data ? data.achivements : " ";
-    const name = data ? data?.name : " ";
-    const about = data ? data?.about : " ";
+    const name: string = data ? data?.name : " ";
+    const about: string = data ? data?.about : " ";
 
     return (
         <div className="program">
@@ -73,7 +115,7 @@ function Program({ data }) {
                                 ? Object.entries(achivements).map(
                                       ([key, value]) => (
                                           <li className="list-item" key={key}>
-                                              {`${value}`}
+                                              {value}
                                           </li>
                                       )
                                   )
@@ -99,6 +141,6 @@ function Program({ data }) {
             </div>
         </div>
     );
-}
+};
 
 export default Program;

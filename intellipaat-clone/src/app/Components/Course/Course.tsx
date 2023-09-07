@@ -2,8 +2,65 @@ import React from "react";
 import "./Course.scss";
 import { AiOutlineCheck } from "react-icons/ai";
 
-function Course({ course }) {
-    // console.log("course data" , course);
+
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface onlyImg {
+    id : number ,
+    img: data,
+
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data;
+}
+
+interface courseData {
+    course: {
+        id: number;
+        applyHeading: string;
+        applyRules: Record<string, string>;
+        roleHeading: string;
+        allRoles: Record<string, string>;
+        skills: Record<string , string>
+        skillType : string,
+        img : data,
+        allImages : Array<onlyImg>,
+
+    };
+}
+
+const Course : React.FC<courseData> = ({ course }) => {
+    console.log("course data" , course);
     const applyRules = course ? course.applyRules : "";
     const allRoles = course ? course.allRoles : " ";
     const skills = course ? course.skills : " ";

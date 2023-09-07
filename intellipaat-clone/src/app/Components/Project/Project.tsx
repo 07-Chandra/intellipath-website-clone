@@ -2,16 +2,63 @@
 import React, { useState } from "react";
 import "./Project.scss";
 
-function Project({ project }) {
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data;
+}
+
+interface projectData {
+    project: {
+        id: number;
+        heading: string;
+        about: string;
+        levels: Record<string, string>;
+        aboutHosting: Record<string, string>;
+        percent: string;
+        advancement: Array<featuresItem>;
+        img : data,
+    };
+}
+
+const Project: React.FC<projectData> = ({ project }) => {
     const advancement = project ? project?.advancement : "";
     const stage = project ? project.levels : " ";
     const levelOne = project ? project.aboutHosting.first : "";
     const levelTwo = project ? project.aboutHosting.second : "";
     const levelThree = project ? project.aboutHosting.third : "";
-    // console.log("project data", aboutHosting);
+    // console.log("project data", project);
 
     const [level, setLevel] = useState(1);
-    // console.log(level);
     return (
         <div className="project">
             <div className="project-container">
@@ -111,6 +158,6 @@ function Project({ project }) {
             </div>
         </div>
     );
-}
+};
 
 export default Project;

@@ -9,14 +9,78 @@ import { AiOutlineCheck, AiOutlineDown } from "react-icons/ai";
 import { BsCalendarMinus } from "react-icons/bs";
 // import {BsCalendarMinus} from
 
-function Cohort({ data }) {
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data;
+}
+
+interface itemScheama {
+    id: number;
+    quary: string;
+    ans: Record<string, string>;
+    list: Boolean;
+}
+
+interface tableSchema {
+    id: number;
+    imgName: string;
+    item1: string;
+    item2: string;
+    img: data;
+}
+
+interface cohortData {
+    data: {
+        id: number;
+        title: string;
+        heading: string;
+        question: string;
+        extra: string;
+        features: Array<{ id: number; item: string }>;
+        module1: Array<itemScheama>;
+        table: Array<tableSchema>;
+    };
+}
+
+const Cohort: React.FC<cohortData> = ({ data }) => {
     const table = data ? data?.table : "";
     const modules = data ? data.module1 : "";
     const newTable = table ? table.slice(1) : "";
-    const firstIndex = table ? table[0] : "";
+    const firstIndex: tableSchema | undefined =
+        table && table.length > 0 ? table[0] : undefined;
     const features = data ? data.features : "";
 
-    // console.log("new Array", firstIndex);
+    console.log("cohort", data);
 
     const [count, setCount] = useState(0);
 
@@ -223,6 +287,6 @@ function Cohort({ data }) {
             </div>
         </div>
     );
-}
+};
 
 export default Cohort;

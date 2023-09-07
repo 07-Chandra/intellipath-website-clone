@@ -1,11 +1,65 @@
 import React from "react";
 import "./Transition.scss";
 
-function Transition({ data }) {
-    const arrowImg = data ? data?.arrowImg?.data.attributes.url : "";
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data,
+}
+
+
+interface transitionData {
+    data: {
+        id: number;
+        name: string;
+        position: string;
+        about: string;
+        title: string;
+        btnName: string;
+        features: Array<featuresItem>;
+        status: featuresItem;
+        company: featuresItem;
+        arrowImg: data,
+        nextCompany: featuresItem;
+        img: data,
+    };
+}
+
+const Transition: React.FC<transitionData> = ({ data }) => {
+    const arrowImg = data ? data?.arrowImg?.data?.attributes.url : "";
     const features = data ? data.features : "";
 
-    console.log("transition data" , data);
+    // console.log("transition data", data);
 
     return (
         <div className="container">
@@ -106,6 +160,6 @@ function Transition({ data }) {
             <a className="link">{data.btnName}</a>
         </div>
     );
-}
+};
 
 export default Transition;

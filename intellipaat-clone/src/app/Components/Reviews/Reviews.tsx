@@ -1,13 +1,87 @@
 import React from "react";
 import "./Reviews.scss";
-function Reviews({ review }) {
+
+
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data;
+}
+
+interface top {
+    id: number;
+    name: string;
+    log: data;
+    profileImg: data;
+}
+
+interface center {
+    id: number;
+    name: string;
+    position: string;
+    about: string;
+    profileImg: data;
+}
+interface bottom {
+    id: number;
+    name: string;
+    position: string;
+    about: string;
+    profileImg: data;
+    icon: data;
+}
+
+interface reviewData {
+    review: {
+        id: number;
+        title: string;
+        val: string;
+        rate: string;
+        text: string;
+        reviewTop: Array<top>;
+        reviewCenter: Array<center>;
+        reviewBottom: Array<bottom>;
+        img: data;
+    };
+}
+const Reviews: React.FC<reviewData> = ({ review }) => {
     const img = review ? review?.img?.data.attributes.url : "";
 
     const reviewTop = review ? review?.reviewTop : "";
     const reviewCenter = review ? review.reviewCenter : "";
     const reviewBottom = review ? review.reviewBottom : "";
 
-    // console.log("review ", reviewBottom);
+    console.log("review ", review);
+
     return (
         <div className="review">
             <div className="review-container">
@@ -113,7 +187,6 @@ function Reviews({ review }) {
                                           </div>
 
                                           <div className="image-wrapper">
-                                            
                                               <img
                                                   src={
                                                       user?.icon?.data
@@ -132,6 +205,6 @@ function Reviews({ review }) {
             </div>
         </div>
     );
-}
+};
 
 export default Reviews;

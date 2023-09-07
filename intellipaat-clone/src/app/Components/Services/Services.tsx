@@ -3,9 +3,69 @@
 import React, { useState } from "react";
 import "./Services.scss";
 
-//  let value = String;
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
 
-function Services({ data }) {
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface featuresItem {
+    id: number;
+    text: string;
+    img: data;
+}
+interface imgSchema {
+    id: number;
+    img: data;
+}
+
+interface infoSchema {
+    id: number;
+    name: string;
+    type: string;
+    about: string;
+    img: data;
+}
+interface serviceData {
+    data: {
+        id: number;
+        title: string;
+        stage: Record<string, string>;
+        alumni: string;
+        peer: string;
+        aboutPeer: string;
+        img: data;
+        alumniImg: data;
+        allInfo: Array<infoSchema>;
+        buttons: Array<featuresItem>;
+        peerImages: Array<imgSchema>;
+    };
+}
+
+const Services: React.FC<serviceData> = ({ data }) => {
     // console.log("service data ", data);
 
     const stages = data ? data?.stage : "";
@@ -174,6 +234,6 @@ function Services({ data }) {
             </div>
         </div>
     );
-}
+};
 
 export default Services;

@@ -3,13 +3,73 @@ import React, { useState } from "react";
 
 import "./Curriculum.scss";
 
-// import Interested from "@/app/SubComponents/Interested/Interested.tsx";
 import Interested from "@/app/SubComponents/Interested/Interested";
 import Highlight from "@/app/SubComponents/Highlight/Highlight";
 import Points from "@/app/SubComponents/Points/Points";
-function Curriculum({ data }) {
-    const [count, setCount] = useState(0);
 
+interface imgAttributes {
+    name: string;
+    alternativeText: null | string;
+    caption: null | string;
+    width: number;
+    height: number;
+    formats: null | any;
+    hash: string;
+    ext: string;
+    mime: string;
+    size: number;
+    url: string;
+    previewUrl: null | string;
+    provider: string;
+    provider_metadata: {
+        public_id: string;
+        resource_type: string;
+    };
+    createdAt: string;
+    updatedAt: string;
+}
+
+interface data {
+    data: {
+        id: number;
+        attributes: imgAttributes;
+    };
+}
+
+interface highlightSchema {
+    id: number;
+    text: string;
+    img: data;
+}
+
+interface moduleSchema {
+    id: number;
+    name: string;
+    upper: Record<string, string>;
+    listType: "ol " | "ul" | "none";
+    btn: string;
+    lower: Record<string, Record<string, string>>;
+}
+
+interface curriculamData {
+    data: {
+        id: number;
+        course1: string;
+        course2: string;
+        desc: string;
+        about: string;
+        programName: string;
+        title2: string;
+        title: string;
+        module1: Array<moduleSchema>;
+        modules: Array<moduleSchema>;
+        highlightItem: Array<highlightSchema>;
+    };
+}
+
+const Curriculum: React.FC<curriculamData> = ({ data }) => {
+    // console.log("curriculam data", data);
+    const [count, setCount] = useState(0);
     const module1 = data ? data?.modules : "";
     const module2 = data ? data?.module1 : "";
     const hightlightData = data ? data?.highlightItem : "";
@@ -17,7 +77,7 @@ function Curriculum({ data }) {
     // console.log("data arrived" , module1 , module2, hightlightData);
 
     function checkCount(val) {
-        if (val == count) {
+        if (val == count){
             setCount(-1);
         } else {
             setCount(val);
@@ -312,6 +372,6 @@ function Curriculum({ data }) {
             </div>
         </div>
     );
-}
+};
 
 export default Curriculum;
