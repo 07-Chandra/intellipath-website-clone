@@ -8,7 +8,6 @@ function Caunselling() {
             <div className="contact-form">
                 <div className="cover1">
                     <h3 className="title">Free Career Caunselling</h3>
-
                     <div className="para">we are happy to help you 24/7</div>
 
                     <div className="form">

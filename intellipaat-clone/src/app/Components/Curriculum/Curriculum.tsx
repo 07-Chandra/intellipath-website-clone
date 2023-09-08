@@ -3,11 +3,12 @@ import React, { useState } from "react";
 
 import "./Curriculum.scss";
 
-import Interested from "@/app/SubComponents/Interested/Interested";
-import Highlight from "@/app/SubComponents/Highlight/Highlight";
-import Points from "@/app/SubComponents/Points/Points";
+import Interested from "@/app/SubComponents/Interested/Interested.tsx";
+import Highlight from "@/app/SubComponents/Highlight/Highlight.tsx";
+import Points from "@/app/SubComponents/Points/Points.tsx";
 
 interface imgAttributes {
+
     name: string;
     alternativeText: null | string;
     caption: null | string;
@@ -27,6 +28,7 @@ interface imgAttributes {
     };
     createdAt: string;
     updatedAt: string;
+    
 }
 
 interface data {

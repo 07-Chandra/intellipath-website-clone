@@ -4,6 +4,7 @@ import Contact from "@/app/SubComponents/Contact/Contact";
 // import Test from "../Test";
 
 interface imgAttributes {
+
     name: string;
     alternativeText: null | string;
     caption: null | string;
@@ -23,6 +24,7 @@ interface imgAttributes {
     };
     createdAt: string;
     updatedAt: string;
+    
 }
 
 interface imgSchema {

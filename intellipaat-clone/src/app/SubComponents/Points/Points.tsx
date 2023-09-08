@@ -1,6 +1,11 @@
 import React from "react";
 import "./Points.scss";
-function Points({ name }) {
+
+type point = {
+    name: string;
+};
+
+const Points: React.FC<point> = ({ name }) => {
     return (
         <div className="points">
             <div className="icon-part">
@@ -46,6 +51,6 @@ function Points({ name }) {
             </div>
         </div>
     );
-}
+};
 
 export default Points;

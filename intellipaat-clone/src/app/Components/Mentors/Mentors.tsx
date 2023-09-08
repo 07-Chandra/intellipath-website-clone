@@ -1,6 +1,6 @@
 import React from "react";
 import "./Mentors.scss";
-import Interested from "@/app/SubComponents/Interested/Interested";
+import Interested from "@/app/SubComponents/Interested/Interested.tsx";
 
 interface imgAttributes {
     name: string;

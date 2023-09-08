@@ -1,7 +1,8 @@
 import React from "react";
 import "./Program.scss";
 
-import Caunselling from "@/app/SubComponents/Caunselling/Caunselling";
+// import Caunselling from "@/app/SubComponents/Caunselling/Caunselling.tsx";
+import Caunselling from "@/app/SubComponents/Caunselling/Caunselling.tsx";
 
 interface imgAttributes {
     name: string;

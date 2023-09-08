@@ -6,6 +6,11 @@ import { TbHeartRateMonitor } from "react-icons/tb";
 import { BsFillRocketTakeoffFill } from "react-icons/bs";
 import { BiSolidPhoneCall } from "react-icons/bi";
 
+// interface data{
+//     info : string,
+//     name : string,
+// }
+
 function Highlight({ info, name }) {
     console.log("here is info", info);
 

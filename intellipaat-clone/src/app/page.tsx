@@ -1,23 +1,39 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Admission from "./Components/Admission/Admission.jsx";
-import Cohort from "./Components/Cohort/Cohort.jsx";
-import Course from "./Components/Course/Course.jsx";
-import Curriculum from "./Components/Curriculum/Curriculum.jsx";
-import Hero from "./Components/Hero/Hero.jsx";
-import Mentors from "./Components/Mentors/Mentors.jsx";
-import Program from "./Components/Program/Program.jsx";
-import Project from "./Components/Project/Project.jsx";
-import Reviews from "./Components/Reviews/Reviews.jsx";
-import Services from "./Components/Services/Services.jsx";
-import Transition from "./Components/Transition/Transition.jsx";
-import Contact from "./SubComponents/Contact/Contact.jsx";
+import Admission from "./Components/Admission/Admission.tsx";
+import Cohort from "./Components/Cohort/Cohort.tsx";
+import Course from "./Components/Course/Course.tsx";
+import Curriculum from "./Components/Curriculum/Curriculum.tsx";
+import Hero from "./Components/Hero/Hero.tsx";
+import Mentors from "./Components/Mentors/Mentors.tsx";
+import Program from "./Components/Program/Program.tsx";
+import Project from "./Components/Project/Project.tsx";
+import Reviews from "./Components/Reviews/Reviews.tsx";
+import Services from "./Components/Services/Services.tsx";
+import Transition from "./Components/Transition/Transition.tsx";
 import { axiosClient } from "./Utils/axiosClient.js";
 import axios from "axios";
 
+interface ApiData {
+    // Define the structure of your API response data here
+    // For example:
+    hero: any;
+    Program: any;
+    transition: any;
+    Course: any;
+    mentors: any;
+    curriculam: any;
+    project: any;
+    review: any;
+    services: any;
+    admission: any;
+    cohort: any;
+}
+
+
 function Home() {
-    const [apiData, setApiData] = useState(null);
+    const [apiData, setApiData] = useState<ApiData | null>(null);
 
     async function fetchData() {
         try {
